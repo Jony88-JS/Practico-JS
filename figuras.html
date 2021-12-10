@@ -4,12 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Figuras gemétricas|curso JS</title>
 </head>
 <body>
-    <h1>
-        Figuras geométricas
-    </h1>
+    <header class="header-index">
+        <figure class="header-logo">
+            <img src="img/R.png" alt="">
+        </figure>
+        <div class="div-header">
+            <h1 class="header-index_h1">
+                Math Both
+            </h1>
+            <p class="header-index_p"> Both asistente para cálculos aritméticos</p>
+        </div>
+    </header>
+    <div class="sub-titulo">
+        
+        <h3 class="sub-titulo_h3"><strong>¡Hola! soy Math bot</strong>. Te ayudaré con operaciones que deseas realizar en esta página.</h3>
+        <figure class="sub-titulo_img">
+            <img src="./img/R.png">
+        </figure>
+    </div>
+    <section class="section-cuadrado">
+        <h2 class="section-cuadrado_h2">Área y perímetro de un cuadrado</h2>
+        <form class="form-cuadrado">
+            <label class="section-cuadrado_label" for="InputCuadrado">
+                Ingresa la medida del cuadarado
+            </label>
+            <input id="InputCuadrado" type="number" />
+            <button type="button" onclick="calcularPerimetroCuadrado()">
+                Perímetro
+            </button>
+            <button type="button" onclick="calcularAreaCuadrado()">
+                Área
+            </button>            
+        </form>
+    </section>
+    <section class="section-triangulo">
+        <h2 class="section-triangulo_h2">Área y perímetro de un triangulo, altura de un isósceles.</h2>
+        <form class="form-triangulo">
+        <label class="section-triangulo_label" for="InputTriangulo">
+                Ingresa las medidas del triangulo
+        </label>
+            <div class="div-triangulo">
+                <p>Lado 1</p>
+                <input id="InputTrianguloL1" type="number">
+                <p>Lado 2</p>
+                <input id="InputTrianguloL2" type="number">
+                <p>Base</p>
+                <input id="InputTrianguloBa" type="number">
+                <p>Altura</p>
+                <input id="InputTrianguloAlt" type="number">
+           </div>
+        <button type="button" onclick="calcularPerimetroTriangulo()">
+            C. perímetro
+        </button>
+        <button type="button" onclick="calcularAreaTriangulo()">
+                C. area
+        </button>
+        <button type="button" onclick="calcularAlturaIsoceles()">
+                C. Altura isósceles
+        </button>
+            
+            
+        </form>
+    </section>
+    <section class="section-circulo">
+        <h2 class="section-circulo_h2">Área, perímetro y diametro de un círculo.</h2>
+        <form class="form-circulo">
+        <label class="section-circulo_label" for="Inputcirculo">
+                Ingresa la medida del circulo que quieres calcular.
+        </label>
+            <input id="InputCirculo" type="number">
+        <button type="button" onclick="calcularAreaCirculo()">
+            C. area
+        </button>
+        <button type="button" onclick="calcularPerimetroCirculo()">
+                C. Perímetro
+        </button>        
+        </form>
+    </section>
 
     <script src="./figuras.js"></script>
 </body>
