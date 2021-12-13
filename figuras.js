@@ -41,6 +41,23 @@ function perimetroTriangunlo(lado1, lado2, base){
 function areaTriangulo (altura, base){
     return (base * altura) / 2;
 }
+
+function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase) {
+    if (trianguloGrandeLadoA != trianguloGrandeLadoB) {
+        console.error("Los lados a y b no son iguales");
+    } else {
+        const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
+        const trianguloPequenoLadoBase = trianguloGrandeLadoA;
+
+        const trianguloPequenoLadoBCuadrado = trianguloPequenoLadoB * trianguloPequenoLadoB;
+        const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase * trianguloPequenoLadoBase;
+
+        const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBCuadrado);
+
+        const trianguloGrandeAltura = trianguloPequenoLadoA;
+        return trianguloGrandeAltura;
+    }
+}
 /*
 console.log ("La altura  del triangulo es de: " + alturaTriangulo + "cm. ");
 
@@ -107,6 +124,16 @@ function calcularPerimetroTriangulo(){
     const perimetro = perimetroTriangunlo(lado1, lado2, base);
     alert("El perimetro del triangulo es: " + perimetro);  
 }
+
+function calcularAlturaIsoceles(){    
+    const trianguloGrandeLadoA = parseInt(document.getElementById("InputTrianguloL1").value);
+    const trianguloGrandeLadoB = parseInt(document.getElementById("InputTrianguloL2").value);
+    const trianguloGrandeLadoBase = parseInt(document.getElementById("InputTrianguloBa").value);
+    const altura = alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase);
+    alert("La altura del triangulo es: " + altura);  
+}
+
+
 
 function calcularAreaTriangulo(){    
     const input2 = document.getElementById("InputTrianguloAlt");
